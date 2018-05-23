@@ -79,7 +79,10 @@
                             <label for="sex" class="col-md-4 col-form-label text-md-right">{{ __('Sex') }}</label>
 
                             <div class="col-md-6">
-                                <input id="sex" type="text" class="form-control{{ $errors->has('sex') ? ' is-invalid' : '' }}" name="sex" required>
+                              <select id="sex" type="text" class="form-control{{ $errors->has('sex') ? ' is-invalid' : '' }}" name="sex" required>
+                                <option value="M">男</option>
+                                <option value="F">女</option>
+                              </select>
 
                                 @if ($errors->has('sex'))
                                     <span class="invalid-feedback">
