@@ -16,15 +16,15 @@
 <body>
 	<div class="container-fluid" id="c1">
 		<div class="row" id="first">
-			<div class="col-md-offset-2 col-md-1">
+			<div class="col-md-offset-2 col-md-1" id="home">
 			<a href="index.html"><img src="image/logo1.png" alt="logo1" width="100px" height="80px"
 			onmouseover="this.src='image/logo2.png';"
 			onmouseout="this.src='image/logo1.png';"></a>
 			</div>
 			<div id="label">
-				<div class="col-md-4 col-md-offset-5 s">
+				<div class="col-md-3 col-md-offset-6 s">
 						<ul>
-							<li><a href="index.html#c2">關於夢境</a></li>
+							<!-- <li><a href="index.html#c2">關於夢境</a></li> -->
 							<li><a href="index.html#c3">夢享專區</a></li>
 							@if (!Auth::check())
 								<li><a href="{{url('login')}}">登入</a></li>
@@ -51,6 +51,9 @@
 				</div>
 			</div>
 		</div>
+		<a href="index.html#c2"><img src="image/more1.png"
+		onmouseover="this.src='image/more2.png';"
+		onmouseout="this.src='image/more1.png';" id="downicon"></i></a>
 	</div>
 	<div class="container-fluid" id="c2">
 		<img src="image/about.png" alt="about" id="about">
