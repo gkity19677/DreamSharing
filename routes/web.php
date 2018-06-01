@@ -20,3 +20,4 @@ Auth::routes();
 
 
 Route::get('/index', 'HomeController@index');
+Route::get('/happy', 'DreamSharingController@index');
