@@ -2,11 +2,15 @@ body {
   height: 100%;
   margin: 0;
 }
+.container-fluid#c0{
+  height: 90px;
+  background-color: rgb(174, 214, 241);
+}
 .container-fluid#c1{
-	background-image: url('../image/bg.jpg');
+	background-image: url('../image/bg1.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 770px;
+	height: 680px;
 }
 #member{
 	height: 20%;
@@ -15,7 +19,7 @@ body {
 #downicon{
   height: 60px;
   margin-left:45%;
-  margin-top: 42%;
+  margin-top: 36%;
 }
 #home{
   bottom:10px;
@@ -61,30 +65,35 @@ ul{
 }
 
 .container-fluid#c2{
-	background-image:url('../image/bg2.png');
-	background-repeat: no-repeat;
+  background-image: url('../image/index_aboutdream.png');
 	background-size: cover;
 	height: 770px;
 }
 #content1 {
-	position:absolute;
-    top:45%;
-    left:50%;
-    margin-top:36%;
-    margin-left:-36%;
-    height: 630px;
-    width: 1100px;
-    background-color:rgba(249, 251, 231,0.5);
+  margin-left:580px;
+  margin-top:-370px;
 }
-#content2 {
-	position:absolute;
-    top:45%;
-    left:50%;
-    margin-top:38.5%;
-    margin-left:-33%;
-    height: 550px;
-    width: 1000px;
-    background-color:rgba(255, 253, 231,0.5);
+#con{
+  background-color: rgb(255,255,255);
+  height: 600px;
+  width: 650px;
+}
+#aboutword{
+  height: 180px;
+  width: 300px;
+  margin-top: 300px;
+  margin-left: 150px;
+}
+#word{
+  font-family: 微軟正黑體;
+  font-size: 18px;
+  line-height: 33px;
+  padding-left: 45px;
+  padding-top: 0px;
+}
+#feather{
+  margin-left: 550px;
+  margin-top: 5%;
 }
 #about{
 	margin-left: 42%;
