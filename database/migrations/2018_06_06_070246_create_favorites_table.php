@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDreamsTable extends Migration
+class CreateFavoritesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,13 @@ class CreateDreamsTable extends Migration
      */
     public function up()
     {
-        Schema::create('dreams', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('title');
-              $table->string('content');
+        Schema::create('favorites', function (Blueprint $table) {
+            $table->increments('fid');
+            $table->string('flag');
               $table->string('account',200);
               $table->foreign('account')->references('account')->on('users');
-              $table->datetime('date');
-              $table->datetime('share_time')->nullable();
-          //  $table->timestamps('');
+              $table->string('article_id');
+          //  $table->timestamps();
         });
     }
 
@@ -32,6 +30,6 @@ class CreateDreamsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dreams');
+        Schema::dropIfExists('favorites');
     }
 }

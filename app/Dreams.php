@@ -8,7 +8,7 @@ class Dreams extends Model
 {
     protected $table='dreams';
   protected   $primaryKey = 'id';
-  protected  $fillable = ['title','contcent']
+  protected  $fillable = ['title','contcent','date','account']
     //
 
 }
