@@ -19,7 +19,7 @@ class CreateReplysTable extends Migration
             $table->string('account',200);
             $table->foreign('account')->references('account')->on('users');
             $table->datetime('date');
-            $table->int('did');
+            $table->integer('did');
             $table->foreign('did')->references('id')->on('dreams');
         //  $table->timestamps('');
         });
