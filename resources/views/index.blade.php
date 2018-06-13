@@ -5,6 +5,11 @@
 		<a href="#c2"><img src="image/more1.png"
 		onmouseover="this.src='image/more2.png';"
 		onmouseout="this.src='image/more1.png';" id="downicon"></i></a>
+		<script type="text/javascript">
+			$('.gomore').click(function(){
+	    $('html,body').animate({scrollTop:$('#c2').offset().top},1500);
+	    });
+		</script>
 	</div>
 	<div class="container-fluid" id="c2">
 		<img src="image/about1.png" id="aboutword">
@@ -29,13 +34,20 @@
 	<div class="container-fluid" id="c3">
 		<img src="image/area.png" alt="area" id="about">
 		<div id="threepic">
-			<a href="mydream.html" ><img src="image/我的夢境1.png" alt="my dream" id="mydream"></a>
-			<a href="analyze.html" ><img src="image/我想解夢1.png" alt="analyze" id="analyze"></a>
+			<a href="{{url('mydream')}}" ><img src="image/我的夢境1.png" alt="my dream" id="mydream"></a>
+			<a href="{{url('analyze')}}" ><img src="image/我想解夢1.png" alt="analyze" id="analyze"></a>
 			<a href="#"><img src="image/夢境分享區1.png" alt="share" id="share"></a>
 		</div>
-		<a href="#c0" id="arrow"><img src="image/箭頭.png"
+		<div class="goTop">
+		<a href="index.html#c0" id="arrow"><img src="image/箭頭.png"
 		onmouseover="this.src='image/箭頭2.png';"
 		onmouseout="this.src='image/箭頭.png';"></a>
+		</div>
+		<script type="text/javascript">
+			$('.goTop').click(function(){
+	    $('html,body').animate({scrollTop:$('layouts.layout#c0').offset().top},1500);
+	    });
+		</script>
 	</div>
 
 @endsection

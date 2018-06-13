@@ -17,7 +17,7 @@
 	<div class="container-fluid" id="c0">
 		<div class="row" id="first">
 			<div class="col-md-offset-2 col-md-1" id="home">
-			<a href="index.html"><img src="image/logo1.png" alt="logo1" width="100px" height="80px"
+			<a href="{{url('index')}}"><img src="image/logo1.png" alt="logo1" width="100px" height="80px"
 			onmouseover="this.src='image/logo2.png';"
 			onmouseout="this.src='image/logo1.png';"></a>
 			</div>
@@ -25,7 +25,7 @@
 				<div class="col-md-3 col-md-offset-6 s">
 						<ul>
 							<!-- <li><a href="index.html#c2">關於夢境</a></li> -->
-							<li><a href="index.html#c3">夢享專區</a></li>
+							<li><a href="{{url('index#c3')}}">夢享專區</a></li>
 							@if (!Auth::check())
 								<li><a href="{{url('login')}}">登入</a></li>
 							@else
@@ -44,8 +44,8 @@
 							@endif
 
 							<li><a href="{{url('register')}}">註冊</a></li>
-							<a href="#" id="user">
-  							<img src="image/user2.png" alt="member" id="member">
+							<a href="#">
+  							<img src="image/femaleuser.png" alt="member" id="member">
 							</a>
 						</ul>
 				</div>

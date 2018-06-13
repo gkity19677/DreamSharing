@@ -11,4 +11,13 @@ class DreamSharingController extends Controller
 
       return view('mydream');
     }
+
+    public function mydream(){
+
+      return view('mydream.mydream');
+    }
+
+    public function analyze(){
+      return view('analyze.analyze');
+    }
 }
