@@ -3,7 +3,7 @@ body {
   margin: 0;
 }
 .container-fluid#c0{
-  height: 90px;
+	height: 90px;
   background-color: rgb(174, 214, 241);
 }
 .container-fluid#c1{
@@ -21,9 +21,14 @@ body {
   margin-left:45%;
   margin-top: 36%;
 }
+#downicon2{
+  height: 100px;
+  margin-left:75%;
+  margin-top: -10%;
+}
 #home{
   bottom:10px;
-right: 20px;
+  right: 20px;
 }
 #arrow{
   margin-left: 90%;
@@ -65,9 +70,9 @@ ul{
 }
 
 .container-fluid#c2{
-  background-image: url('../image/index_aboutdream.png');
 	background-size: cover;
 	height: 770px;
+  background-image: url('../image/index_aboutdream.png');
 }
 #content1 {
   margin-left:580px;
@@ -97,7 +102,7 @@ ul{
 }
 #about{
 	margin-left: 42%;
-	margin-top: 3%;
+	margin-top: 8%;
 }
 .container-fluid#c3{
 	background-image:url('../image/bg3.png');
@@ -106,7 +111,7 @@ ul{
 	height: 770px;
 }
 #threepic{
-	margin-top: 10%;
+	margin-top: 4%;
 	margin-left: 4%;
 }
 #mydream{

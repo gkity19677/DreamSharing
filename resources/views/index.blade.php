@@ -29,6 +29,14 @@
 				都可以來「夢享」尋找夢的解答！
 			</p>
 			</div>
+			<a href="#" class="gomoremore"><img src="image/moremore.png"
+			onmouseover="this.src='image/moremore2.png';"
+			onmouseout="this.src='image/moremore.png';" id="downicon2"></a>
+			<script type="text/javascript">
+				$('.gomoremore').click(function(){
+		    $('html,body').animate({scrollTop:$('#c3').offset().top},1500);
+		    });
+			</script>
 		</div>
 	</div>
 	<div class="container-fluid" id="c3">

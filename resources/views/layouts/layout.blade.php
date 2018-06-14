@@ -25,7 +25,12 @@
 				<div class="col-md-3 col-md-offset-6 s">
 						<ul>
 							<!-- <li><a href="index.html#c2">關於夢境</a></li> -->
-							<li><a href="{{url('index#c3')}}">夢享專區</a></li>
+							<li><a href="{{url('index#c3')}}" class="gomoremore">夢享專區</a></li>
+							<script type="text/javascript">
+								$('.gomoremore').click(function(){
+						    $('html,body').animate({scrollTop:$('#c3').offset().top},1500);
+						    });
+							</script>
 							@if (!Auth::check())
 								<li><a href="{{url('login')}}">登入</a></li>
 							@else
