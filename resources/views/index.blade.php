@@ -2,7 +2,7 @@
 @section('content')
 
 	<div class="container-fluid" id="c1">
-		<a href="#c2"><img src="image/more1.png"
+		<a href="#" class="gomore"><img src="image/more1.png"
 		onmouseover="this.src='image/more2.png';"
 		onmouseout="this.src='image/more1.png';" id="downicon"></i></a>
 		<script type="text/javascript">
@@ -39,13 +39,13 @@
 			<a href="#"><img src="image/夢境分享區1.png" alt="share" id="share"></a>
 		</div>
 		<div class="goTop">
-		<a href="index.html#c0" id="arrow"><img src="image/箭頭.png"
+		<a href="#" class="goTop" id="arrow"><img src="image/箭頭.png"
 		onmouseover="this.src='image/箭頭2.png';"
 		onmouseout="this.src='image/箭頭.png';"></a>
 		</div>
 		<script type="text/javascript">
 			$('.goTop').click(function(){
-	    $('html,body').animate({scrollTop:$('layouts.layout#c0').offset().top},1500);
+	    $('html,body').animate({scrollTop:$('#c0').offset().top},1500);
 	    });
 		</script>
 	</div>
