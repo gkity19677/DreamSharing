@@ -49,9 +49,15 @@
 							@endif
 
 							<li><a href="{{url('register')}}">註冊</a></li>
-							<a href="#">
-  							<img src="image/femaleuser.png" alt="member" id="member">
-							</a>
+							@if(Auth::user()->sex=='M')
+								<a href="#">
+	  							<img src="image/maleuser.png" alt="member" id="member">
+								</a>
+							@elseif (Auth::user()->sex=='F')
+								<a href="#">
+	  							<img src="image/femaleuser.png" alt="member" id="member">
+								</a>
+							@endif
 						</ul>
 				</div>
 			</div>

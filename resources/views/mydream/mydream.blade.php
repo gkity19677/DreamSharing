@@ -24,13 +24,13 @@
             </div>
                 <hr>
           @endforeach
-					
+
         </div>
   </div>
 </div>
 <script language="javascript">
 function test() {　
-　document.location.href='mydream_result.html';
+　document.location.href='mydream_result';
 }
 </script>
 

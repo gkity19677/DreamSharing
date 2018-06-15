@@ -26,4 +26,6 @@ Route::get('/mydream', 'DreamSharingController@mydream');
 Route::get('/mydream_add', 'DreamSharingController@mydream_create');
 Route::post('/mydream_add', 'DreamSharingController@mydream_add');
 
+Route::get('/mydream_result', 'DreamSharingController@mydream_result');
+
 Route::get('/analyze', 'DreamSharingController@analyze');

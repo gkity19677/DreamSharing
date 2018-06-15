@@ -1,62 +1,82 @@
-.container-fluid#backcolor{
-  height: 640px;
-  background-color: rgb(225, 245, 254);
-}
-body{
+body {
   height: 100%;
   margin: 0;
 }
-.button {
+.container-fluid#c5{
+  height: 500px;
+  margin-left: 5%;
+}
+#first{
+  margin-top: 0%;
+  padding-top: 10px;
+	margin-bottom:15px;
+	height:90px;
+	width: 103%;
+	font-family: 微軟正黑體;
+  background-color: rgb(174, 214, 241);
+	position: fixed;
+}
+#home{
+  bottom:10px;
+  right: 25px;
+}
+#member{
+	height: 20%;
+	width: 20%;
+}
+ul{
   display: inline-block;
-  padding: 13px 50px;
-  font-size: 22px;
-  font-family: 微軟正黑體;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: rgb(127, 179, 213);
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 9px #999;
-  margin-top: 15px;
-  margin-left: 20%;
+	position:relative;
 }
-.button:hover {
-	background-color: #5DADE2
+#label li{
+	font-size:18px;
+	list-style-type:none;
+	text-align: center;
+	display:inline;
 }
-.button:active {
-  background-color: #5DADE2;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+#label li a {
+	  color:black;
+    padding: 15px 10px;
+    text-decoration: none;
 }
-.button:focus {
-  background-color: #5DADE2;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+#label li a:hover{
+	border-bottom: solid 0.5px #000000;
 }
-.analyze_content{
-  background-color: rgb(127, 179, 213,0.5);
-  width: 750px;
-  height:550px;
-  margin-left: 29.4%;
-  margin-top: -27.8%;
+#label ul{
+	display: inline-block;
+	position:relative;
+	right: 56%;
+	margin-top: 1%;
 }
-#familyword{
-  padding-left: 5%;
-  padding-top: 8%;
-  font-family: 微軟正黑體;
-  font-size: 17px;
-  line-height: 30px;
+#ana1{
+  margin-right: 2%;
+  width: 250px;
+  height:250px;
 }
-#rain{
-  height: 200px;
-  margin-top: -60%;
-  margin-left: 4%;
+#ana2{
+  margin-right: 2%;
+  width: 250px;
+  height:250px;
 }
-#umgirl{
-  height: 300px;
-  margin-left: 78%;
-  margin-top: -20%;
+#ana3{
+  margin-right: 2%;
+  width: 250px;
+  height:250px;
+}
+#ana4{
+  margin-right: 2%;
+  width: 250px;
+  height:250px;
+}
+#ana5{
+  margin-right: 2%;
+  width: 250px;
+  height:250px;
+}
+.toppic{
+  margin-top: 2%;
+}
+.ana{
+  margin-top: 8%;
+  margin-left: 30%;
 }

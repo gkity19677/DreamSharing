@@ -35,6 +35,11 @@ class DreamSharingController extends Controller
       return redirect('mydream');
     }
 
+    public function mydream_result(){
+
+      return view('mydream.mydream_result');
+    }
+
     public function analyze(){
       return view('analyze.analyze');
     }
