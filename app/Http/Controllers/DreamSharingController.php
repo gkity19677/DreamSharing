@@ -35,9 +35,34 @@ class DreamSharingController extends Controller
       return redirect('mydream');
     }
 
-    public function mydream_result(){
+    public function mydream_result($id){
 
-      return view('mydream.mydream_result');
+      $dreams=Dreams::find($id);
+      return view('mydream.mydream_result',['dreams'=>$dreams]);
+    }
+
+    // public function mydream_delete(Dreams $dream){
+    //
+    //   $dream->delete();
+    //   return redirect('mydream');;
+    // }
+
+    public function mydream_edit($id){
+      $dreams=Dreams::find($id);
+      return view('mydream.mydream_edit',['dreams'=>$dreams]);
+    }
+    public function mydream_update(Request $request)
+    {
+      Dreams::where('id', $request->id)->update([
+        'content'=>$request->content,
+      ]);
+      return redirect('mydream_result/'.$request->id);
+    }
+    public function mydream_delete($id)
+    {
+      $dream = Dreams::find($id);
+      $dream->delete();
+      return redirect('mydream');
     }
 
     public function analyze(){

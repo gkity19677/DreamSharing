@@ -2,8 +2,8 @@
 @section('content')
   <link rel="stylesheet" href="{{asset('css/mydream.css')}}">
 
-  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="  ckeditor/ckeditor.js"></script>
+  <script type="text/javascript" src="{{asset('js/jquery-ui.min.js')}}"></script>
+  <script type="text/javascript" src="{{asset('ckeditor/ckeditor.js')}}"></script>
 
 <div class="container-fluid" id="c7">
   <div id="title">

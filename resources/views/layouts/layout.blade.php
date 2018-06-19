@@ -17,9 +17,9 @@
 	<div class="container-fluid" id="c0">
 		<div class="row" id="first">
 			<div class="col-md-offset-2 col-md-1" id="home">
-			<a href="{{url('index')}}"><img src="image/logo1.png" alt="logo1" width="100px" height="80px"
-			onmouseover="this.src='image/logo2.png';"
-			onmouseout="this.src='image/logo1.png';"></a>
+			<a href="{{url('index')}}"><img src="{{asset('image/logo1.png')}}" alt="logo1" width="100px" height="80px"
+			onmouseover="this.src='{{asset('image/logo2.png')}}';"
+			onmouseout="this.src='{{asset('image/logo1.png')}}';"></a>
 			</div>
 			<div id="label">
 				<div class="col-md-3 col-md-offset-6 s">
@@ -51,11 +51,11 @@
 							<li><a href="{{url('register')}}">註冊</a></li>
 							@if(Auth::user()->sex=='M')
 								<a href="#">
-	  							<img src="image/maleuser.png" alt="member" id="member">
+	  							<img src="{{asset('image/maleuser.png')}}" alt="member" id="member">
 								</a>
 							@elseif (Auth::user()->sex=='F')
 								<a href="#">
-	  							<img src="image/femaleuser.png" alt="member" id="member">
+	  							<img src="{{asset('image/femaleuser.png')}}" alt="member" id="member">
 								</a>
 							@endif
 						</ul>

@@ -1,16 +1,20 @@
 @extends('layouts.layout')
 @section('content')
+  <link rel="stylesheet" href="{{asset('css/mydream.css')}}">
+  <script type="text/javascript" src="{{asset('js/jquery-ui.min.js')}}"></script>
+  <script type="text/javascript" src="{{asset('ckeditor/ckeditor.js')}}"></script>
 
 <div class="container-fluid" id="c7">
   <div id="title">
-    <center><h2>我的夢境</h2></center>
+    <center><h2>{{$dreams->title}}</h2></center>
   </div>
 	<div class="box box-primary" id="form">
         <div class="box-body">
-          <form class="" action="index.html" method="post">
-            <i class="fas fa-calendar-alt"></i>2018/5/20<br><br>
-            <i class="fas fa-edit"></i> <textarea name="name" id="content" rows="8" cols="40"><i class="fas fa-edit"></i> 我在森林裡迷路，遇到一隻跟我一樣高的梅花鹿，我想要靠近看牠，
-            可是他一直走、一直走，我的步伐再快都跟不上牠。</textarea>
+          <form class="" action="{{url('mydream_edit')}}" method="post">
+            @csrf
+            <input type="hidden" name="id" value="{{$dreams->id}}">
+            <i class="fas fa-calendar-alt"></i>{{$dreams->date}}<br><br>
+            <i class="fas fa-edit"></i> <textarea name="content" id="content" rows="8" cols="40"><i class="fas fa-edit"></i>{!!$dreams->content!!}</textarea>
             <script>
             ClassicEditor
           .create( document.querySelector( '#content' ) )
@@ -18,7 +22,8 @@
               console.error( error );
           } );
             </script>
-            <br><a class="btn btn-default pull-right" href="mydream_result.html" role="button">保存</a>
+
+            <br><input class="btn btn-default pull-right" type="submit" value="保存">
           </form>
         </div>
   </div>

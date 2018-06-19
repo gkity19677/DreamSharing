@@ -5,7 +5,7 @@
 
 <div class="container-fluid" id="c7">
   <div id="mydream">
-    <img src="image/mydream.png">
+    <img src="{{asset('image/mydream.png')}}">
   </div>
   <div class="col-md-offset-8 col-md-2 icon" >
       <ul>
@@ -16,12 +16,14 @@
 	<div class="box box-primary" id="form">
         <div class="box-body">
           @foreach ($dreams as $dream)
-            <div class="word" onclick="test()">
-                <strong><i class="fas fa-calendar-alt"></i>{{$dream->date}}</strong>
-                <p class="text-muted" >
-                  <b>{{$dream->title}}</b>
-                </p>
-            </div>
+            <a id="a_{{$dream->id}}" href="mydream_result\{{$dream->id}}"></a>
+              @csrf
+              <div class="word" dream_id="{{$dream->id}}">
+                  <strong><i class="fas fa-calendar-alt"></i>{{$dream->date}}</strong>
+                  <p class="text-muted" >
+                    <b>{{$dream->title}}</b>
+                  </p>
+              </div>
                 <hr>
           @endforeach
 
@@ -29,9 +31,10 @@
   </div>
 </div>
 <script language="javascript">
-function test() {　
-　document.location.href='mydream_result';
-}
+  $('.word').click(function() {
+    var id = $(this).attr("dream_id");
+    document.getElementById("a_"+id).click();
+  });
 </script>
 
 @endsection
