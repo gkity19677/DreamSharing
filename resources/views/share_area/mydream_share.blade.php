@@ -6,6 +6,11 @@
   <script type="text/javascript" src="{{asset('ckeditor/ckeditor.js')}}"></script>
 
 
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/html5shiv.js"></script>
+
+
     <div class="container-fluid" id="c8">
       <div id="topimg">
         <img src="image/sharetopimg.png">
