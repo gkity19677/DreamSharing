@@ -21,7 +21,7 @@ Auth::routes();
 
 Route::get('/index', 'HomeController@index');
 Route::get('/happy', 'DreamSharingController@index');
-
+Route::get('/mydream_share', 'DreamSharingController@mydream_share');
 Route::get('/mydream', 'DreamSharingController@mydream');
 Route::get('/mydream_add', 'DreamSharingController@mydream_create');
 Route::post('/mydream_add', 'DreamSharingController@mydream_add');

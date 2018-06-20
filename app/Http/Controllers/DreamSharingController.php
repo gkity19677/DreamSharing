@@ -23,7 +23,10 @@ class DreamSharingController extends Controller
 
       return view('mydream.mydream_add');
     }
+    public function mydream_share(){
 
+      return view('mydream.mydream_share');
+    }
     public function mydream_add(Request $request){
       $dream=Dreams::create([
         'title' =>$request->title ,
