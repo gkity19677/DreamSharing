@@ -23,10 +23,7 @@ class DreamSharingController extends Controller
 
       return view('mydream.mydream_add');
     }
-    public function mydream_share(){
 
-      return view('mydream.mydream_share');
-    }
     public function mydream_add(Request $request){
       $dream=Dreams::create([
         'title' =>$request->title ,
@@ -70,5 +67,14 @@ class DreamSharingController extends Controller
 
     public function analyze(){
       return view('analyze.analyze');
+    }
+
+    public function analyze_person(){
+      return view('analyze.person');
+    }
+
+    public function share(){
+
+      return view('share_area.share');
     }
 }

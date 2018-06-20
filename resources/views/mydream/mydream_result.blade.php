@@ -24,7 +24,7 @@
                 {!!$dreams->content!!}
               </p>
 					</div>
-					<br><br><a class="btn btn-default pull-right" href={{url('mydream_share')}} role="button">發佈</a>
+					<br><br><a class="btn btn-default pull-right" href={{url('share')}} role="button">發佈</a>
         </div>
   </div>
 </div>

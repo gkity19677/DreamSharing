@@ -45,7 +45,7 @@ ul{
 	margin-top: 1%;
 }
 .container-fluid#c8{
-  padding-top: 8%;
+  padding-top: 2%;
   height: 700px;
 }
 .typebutton{
@@ -70,7 +70,7 @@ button {
   border-radius: 10px;
   box-shadow: 0 5px #999;
   margin-top: 15px;
-  margin-left: 20%;
+  /* margin-left: 20%; */
 }
 button:hover {
 	background-color: #7F8C8D;

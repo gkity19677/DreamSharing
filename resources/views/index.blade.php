@@ -2,9 +2,9 @@
 @section('content')
 
 	<div class="container-fluid" id="c1">
-		<a href="#" class="gomore"><img src="image/more1.png"
-		onmouseover="this.src='image/more2.png';"
-		onmouseout="this.src='image/more1.png';" id="downicon"></i></a>
+		<a href="#" class="gomore"><img src="{{asset('image/more1.png')}}"
+		onmouseover="this.src='{{asset('image/more2.png')}}';"
+		onmouseout="this.src='{{asset('image/more1.png')}}';" id="downicon"></i></a>
 		<script type="text/javascript">
 			$('.gomore').click(function(){
 	    $('html,body').animate({scrollTop:$('#c2').offset().top},1500);
@@ -12,10 +12,10 @@
 		</script>
 	</div>
 	<div class="container-fluid" id="c2">
-		<img src="image/about1.png" id="aboutword">
+		<img src="{{asset('image/about1.png')}}" id="aboutword">
 		<div id="content1">
 			<div id="con">
-			<img src="image/羽毛2.png" id="feather">
+			<img src="{{asset('image/羽毛2.png')}}" id="feather">
 			<p id="word">你經常做夢嗎?<br>
 				人們普遍認為夢是與潛意識溝通的管道，<br>
 				在不同的文化和不同的時代，人們對夢的含意也都有各種不同的看法。<br><br>
@@ -29,9 +29,9 @@
 				都可以來「夢享」尋找夢的解答！
 			</p>
 			</div>
-			<a href="#" class="gomoremore"><img src="image/moremore.png"
-			onmouseover="this.src='image/moremore2.png';"
-			onmouseout="this.src='image/moremore.png';" id="downicon2"></a>
+			<a href="#" class="gomoremore"><img src="{{asset('image/moremore.png')}}"
+			onmouseover="this.src='{{asset('image/moremore2.png')}}';"
+			onmouseout="this.src='{{asset('image/moremore.png')}}';" id="downicon2"></a>
 			<script type="text/javascript">
 				$('.gomoremore').click(function(){
 		    $('html,body').animate({scrollTop:$('#c3').offset().top},1500);
@@ -40,16 +40,16 @@
 		</div>
 	</div>
 	<div class="container-fluid" id="c3">
-		<img src="image/area.png" alt="area" id="about">
+		<img src="{{asset('image/area.png')}}" alt="area" id="about">
 		<div id="threepic">
-			<a href="{{url('mydream')}}" ><img src="image/我的夢境1.png" alt="my dream" id="mydream"></a>
-			<a href="{{url('analyze')}}" ><img src="image/我想解夢1.png" alt="analyze" id="analyze"></a>
-			<a href="#"><img src="image/夢境分享區1.png" alt="share" id="share"></a>
+			<a href="{{url('mydream')}}" ><img src="{{asset('image/我的夢境1.png')}}" alt="my dream" id="mydream"></a>
+			<a href="{{url('analyze')}}" ><img src="{{asset('image/我想解夢1.png')}}" alt="analyze" id="analyze"></a>
+			<a href="{{url('share')}}"><img src="{{asset('image/夢境分享區1.png')}}" alt="share" id="share"></a>
 		</div>
 		<div class="goTop">
-		<a href="#" class="goTop" id="arrow"><img src="image/箭頭.png"
-		onmouseover="this.src='image/箭頭2.png';"
-		onmouseout="this.src='image/箭頭.png';"></a>
+		<a href="#" class="goTop" id="arrow"><img src="{{asset('image/箭頭.png')}}"
+		onmouseover="this.src='{{asset('image/箭頭2.png')}}';"
+		onmouseout="this.src='{{asset('image/箭頭.png')}}';"></a>
 		</div>
 		<script type="text/javascript">
 			$('.goTop').click(function(){

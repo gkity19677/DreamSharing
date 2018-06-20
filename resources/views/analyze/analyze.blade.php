@@ -8,7 +8,7 @@
 				<img src="image/ana.png" alt="">
 			</div>
 			<div class="toppic col-md-offset-2 col-md-10">
-			<a href="person.html" target="_blank" ><img src="image/personcircle2.png" id="ana1"
+			<a href="{{url('person')}}" target="_blank" ><img src="image/personcircle2.png" id="ana1"
 			onmouseover="this.src='image/personcircle1.png';"
 			onmouseout="this.src='image/personcircle2.png';"></a>
 			<a href="#" target="_blank" ><img src="image/animalcircle2.png" id="ana2"
