@@ -22,7 +22,7 @@
 			onmouseout="this.src='{{asset('image/logo1.png')}}';"></a>
 			</div>
 			<div id="label">
-				<div class="col-md-3 col-md-offset-6 s">
+				<div class="col-md-4 col-md-offset-5 col-sm-6">
 						<ul>
 							<!-- <li><a href="index.html#c2">關於夢境</a></li> -->
 							<li><a href="{{url('index#c3')}}" class="gomoremore">夢享專區</a></li>
@@ -31,6 +31,7 @@
 						    $('html,body').animate({scrollTop:$('#c3').offset().top},1500);
 						    });
 							</script>
+							<li><a href="#">我的收藏</a></li>
 							@if (!Auth::check())
 								<li><a href="{{url('login')}}">登入</a></li>
 							@else

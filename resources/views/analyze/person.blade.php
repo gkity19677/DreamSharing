@@ -1,17 +1,32 @@
 @extends('layouts.layout')
 
 @section('content')
-<link rel="stylesheet" href="{{asset('css/analyze.css')}}">
+<link rel="stylesheet" href="{{asset('css/person.css')}}">
 
 <div class="container-fluid" id="backcolor">
   <br>
-  <button type="button" name="button" class="button">家人</button><br>
+  @foreach ($anas as $ana)
+    <input type="button" name="button1" onclick="changetext()" class="button" value="{{$ana->title}}"><br>
+
+  @endforeach
+
+  <div class="analyze_content">
+    <div id="familyword" ana_id="{{$ana->id}}">
+      {{$ana->content}}
+
+    </div>
+  </div>
+
+
+
+  {{-- <button type="button" name="button" class="button">家人</button><br>
   <button type="button" name="button" class="button">朋友</button><br>
   <button type="button" name="button" class="button">老人</button><br>
   <button type="button" name="button" class="button">現任</button><br>
   <button type="button" name="button" class="button">前任</button><br>
-  <button type="button" name="button" class="button">明星</button>
-  <div class="analyze_content">
+  <button type="button" name="button" class="button">明星</button> --}}
+
+  {{-- <div class="analyze_content">
     <div id="familyword">
     夢見與父母一起走路，表示願望能達成，受長輩提拔。<br><br>
     夢見媽媽很慈祥、和藹可親的對微笑，是代表你最近的運勢都很旺，<br>
@@ -23,9 +38,15 @@
     以往難纏的科目，將全部都有好分數;也有可能被老師當眾褒揚，使你神采飛揚。<br><br>
     夢見自己和兄弟姐妹爭吵，好事，預示你可能會得到意外之財，發財致富。
     </div>
-  </div>
+  </div> --}}
   <img src="{{asset('image/rain.png')}}" id="rain">
   <img src="{{asset('image/umgirl.png')}}" id="umgirl">
 </div>
+{{-- <script language="javascript">
+  function changetext() {
+    var id = $(this).attr("ana_id");
+    document.getElementById("txt"+id).innerHTML = {{$ana->content}};
+  });
+</script> --}}
 
 @endsection

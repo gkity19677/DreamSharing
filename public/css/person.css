@@ -1,0 +1,62 @@
+.container-fluid#backcolor{
+  height: 640px;
+  background-color: rgb(225, 245, 254);
+}
+body{
+  height: 100%;
+  margin: 0;
+}
+.button {
+  display: inline-block;
+  padding: 13px 50px;
+  font-size: 22px;
+  font-family: 微軟正黑體;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: rgb(127, 179, 213);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 9px #999;
+  margin-top: 15px;
+  margin-left: 20%;
+}
+.button:hover {
+	background-color: #5DADE2
+}
+.button:active {
+  background-color: #5DADE2;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.button:focus {
+  background-color: #5DADE2;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.analyze_content{
+  background-color: rgb(127, 179, 213,0.5);
+  width: 750px;
+  height:550px;
+  margin-left: 29.4%;
+  margin-top: -8%;
+}
+#familyword{
+  padding-left: 5%;
+  padding-top: 8%;
+  font-family: 微軟正黑體;
+  font-size: 17px;
+  line-height: 30px;
+}
+#rain{
+  height: 200px;
+  margin-top: -60%;
+  margin-left: 4%;
+}
+#umgirl{
+  height: 300px;
+  margin-left: 78%;
+  margin-top: -20%;
+}

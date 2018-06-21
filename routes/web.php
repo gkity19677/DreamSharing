@@ -35,5 +35,5 @@ Route::get('/mydream_edit/{id}', 'DreamSharingController@mydream_edit');
 Route::post('/mydream_edit', 'DreamSharingController@mydream_update');
 Route::get('/mydream_delete/{id}', 'DreamSharingController@mydream_delete');
 
-Route::get('/analyze', 'DreamSharingController@analyze');
-Route::get('/person', 'DreamSharingController@analyze_person');
+Route::get('/analyze', 'AnalyzeController@analyze');
+Route::get('/person', 'AnalyzeController@analyze_person');
