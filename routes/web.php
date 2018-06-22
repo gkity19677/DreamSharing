@@ -20,15 +20,18 @@ Auth::routes();
 
 
 Route::get('/index', 'HomeController@index');
-Route::get('/happy', 'DreamSharingController@index');
 
 Route::get('/share', 'DreamSharingController@share');
+Route::get('/popage', 'DreamSharingController@popage');
+// Route::post('/popage', 'DreamSharingController@popage_update');
 
 Route::get('/mydream', 'DreamSharingController@mydream');
 Route::get('/mydream_add', 'DreamSharingController@mydream_create');
 Route::post('/mydream_add', 'DreamSharingController@mydream_add');
 
 Route::get('/mydream_result/{id}', 'DreamSharingController@mydream_result');
+// Route::get('/mydream_result/{id}', 'DreamSharingController@mydream_show');
+
 // Route::delete('/mydream','DreamSharingController@mydream_delete')
 
 Route::get('/mydream_edit/{id}', 'DreamSharingController@mydream_edit');
@@ -38,3 +41,7 @@ Route::get('/mydream_delete/{id}', 'DreamSharingController@mydream_delete');
 Route::get('/analyze', 'AnalyzeController@analyze');
 Route::get('/person', 'AnalyzeController@analyze_person');
 Route::post('/person', 'AnalyzeController@analyze_person_post');
+
+Route::get('/basic_result', 'DreamSharingController@basic');
+Route::get('/basic_update', 'DreamSharingController@basic_update');
+Route::post('/basic_update', 'DreamSharingController@basic_edit');

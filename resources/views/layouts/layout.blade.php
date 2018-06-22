@@ -51,11 +51,11 @@
 
 							<li><a href="{{url('register')}}">註冊</a></li>
 							@if(Auth::user()->sex=='M')
-								<a href="#">
+								<a href="{{url('basic_result')}}">
 	  							<img src="{{asset('image/maleuser.png')}}" alt="member" id="member">
 								</a>
 							@elseif (Auth::user()->sex=='F')
-								<a href="#">
+								<a href="{{url('basic_result')}}">
 	  							<img src="{{asset('image/femaleuser.png')}}" alt="member" id="member">
 								</a>
 							@endif

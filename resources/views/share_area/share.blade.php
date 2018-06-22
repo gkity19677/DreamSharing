@@ -19,6 +19,18 @@
     </div>
     <div class="box box-primary" id="form">
           <div class="box-body">
+            {{-- @foreach ($dreams as $dream)
+              <a id="a_{{$dream->id}}" href="mydream_result\{{$dream->id}}"></a>
+                @csrf
+                <div class="word" dream_id="{{$dream->id}}">
+                    <img src="image/femaleuser.png" id="user">
+                    <strong><i class="fas fa-calendar-alt"></i>{{$dream->share_time}}</strong>
+                    <p class="text-muted" >
+                      <b>{{$dream->title}}</b>
+                    </p>
+                </div>
+                  <hr>
+            @endforeach --}}
             <div class="word" onclick="test()">
                 <p class="text-muted" >
                   <img src="image/femaleuser.png" id="user">
@@ -45,9 +57,10 @@
     </div>
 
     <script language="javascript">
-    function test() {    　
-    　document.location.href='share_content.html';
-    }
+      $('.word').click(function() {
+        var id = $(this).attr("dream_id");
+        document.getElementById("a_"+id).click();
+      });
     </script>
     </div>
 @endsection

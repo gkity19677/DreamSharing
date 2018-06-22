@@ -17,14 +17,20 @@
   </div>
 	<div class="box box-primary" id="form">
         <div class="box-body">
-					<div class="word" onclick="test()">
-              <strong><i class="fas fa-calendar-alt"></i></i>{{$dreams->date}}</strong>
-              <br><br>
-              <p><i class="fas fa-edit"></i>
-                {!!$dreams->content!!}
-              </p>
-					</div>
-					<br><br><a class="btn btn-default pull-right" href={{url('share')}} role="button">發佈</a>
+          {{-- <form class="" action="{{url('mydream_show')}}" method="post"> --}}
+            <div class="word" onclick="test()">
+                <strong><i class="fas fa-calendar-alt"></i></i>{{$dreams->date}}</strong>
+                <br><br>
+                <p><i class="fas fa-edit"></i>
+                  {!!$dreams->content!!}
+                </p>
+  					</div>
+            <br><br>
+            <a class="btn btn-default pull-right" href="{{url('popage')}}" role="button">發佈</a>
+
+          {{-- </form> --}}
+
+
         </div>
   </div>
 </div>

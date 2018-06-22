@@ -11,7 +11,7 @@
 			<a href="{{url('person')}}" target="_blank" ><img src="image/personcircle2.png" id="ana1"
 			onmouseover="this.src='image/personcircle1.png';"
 			onmouseout="this.src='image/personcircle2.png';"></a>
-			<a href="#" target="_blank" ><img src="image/animalcircle2.png" id="ana2"
+			<a href="# target="_blank" ><img src="image/animalcircle2.png" id="ana2"
 			onmouseover="this.src='image/animalcircle1.png';"
 			onmouseout="this.src='image/animalcircle2.png';"></a>
 			<a href="#" target="_blank" ><img src="image/ghostcircle2.png" id="ana3"

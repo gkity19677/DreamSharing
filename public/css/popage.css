@@ -17,8 +17,8 @@ body {
   right: 25px;
 }
 #member{
-	height: 20%;
-	width: 20%;
+	height: 16%;
+	width: 16%;
 }
 ul{
   display: inline-block;
@@ -41,7 +41,7 @@ ul{
 #label ul{
 	display: inline-block;
 	position:relative;
-	right: 56%;
+	left:-30%;
 	margin-top: 1%;
 }
 .container-fluid#c10{

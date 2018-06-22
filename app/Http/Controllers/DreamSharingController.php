@@ -9,10 +9,6 @@ use Auth;
 class DreamSharingController extends Controller
 {
     //
-    public function index(){
-
-      return view('mydream');
-    }
 
     public function mydream(){
       $dreams=Dreams::all();
@@ -41,10 +37,13 @@ class DreamSharingController extends Controller
       return view('mydream.mydream_result',['dreams'=>$dreams]);
     }
 
-    // public function mydream_delete(Dreams $dream){
+    // public function mydream_show(Request $request){
     //
-    //   $dream->delete();
-    //   return redirect('mydream');;
+    //
+    //   $dream=Dreams::create([
+    //     'share_time'=>$request->share_time,
+    //   ]);
+    //   return redirect('share_area.share');
     // }
 
     public function mydream_edit($id){
@@ -66,11 +65,38 @@ class DreamSharingController extends Controller
     }
 
 
-
-    
-
     public function share(){
+
+      // $dreams=Dreams::where('share_time','NULL')->doesntExist();
 
       return view('share_area.share');
     }
+
+    public function popage(){
+      // $dreams=Dreams::find($id);
+      return view('share_area.popage');
+    }
+
+    public function basic()
+    {
+      return view('basic.basic_result');
+    }
+    public function basic_update()
+    {
+      $user=Auth::user()->all();
+      return view('basic.basic',['user'=>$user]);
+    }
+    public function basic_edit(Request $request)
+    {
+      Auth::user()->update([
+        'name'=>$request->name,
+        'email'=>$request->email,
+        'sex'=>$request->sex,
+        'password'=>$request->password,
+      ]);
+      return redirect('basic_result.basic');
+    }
+
+
+
 }
