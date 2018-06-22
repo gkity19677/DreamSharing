@@ -8,6 +8,6 @@ class Analysis extends Model
 {
   protected $table='analysis';
   protected   $primaryKey = 'id';
-  protected  $fillable = ['title','content'];
+  protected  $fillable = ['title','content','kind'];
     //
 }
