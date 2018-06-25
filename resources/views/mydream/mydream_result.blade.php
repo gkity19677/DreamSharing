@@ -26,7 +26,10 @@
                 </p>
   					</div>
             <br><br>
-            <a class="btn btn-default pull-right" href="{{url('popage')}}" role="button">發佈</a>
+            @if ($dreams->share_time == NUll)
+              <a class="btn btn-default pull-right" href="{{url('popage')}}/{{$dreams->id}}" role="button">發佈</a>
+            @endif
+
 
           {{-- </form> --}}
 

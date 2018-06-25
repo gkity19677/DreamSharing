@@ -11,5 +11,8 @@ class Dreams extends Model
   protected  $fillable = ['title','content','date','account','share_time'];
   public $timestamps = false;
     //
+  public function MyUser(){
+        return $this->belongsTo('App\User','account','account');
+  }
 
 }

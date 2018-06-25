@@ -1,3 +1,10 @@
+body {
+  height: 100%;
+  margin: 0;
+  background-image: url('../image/sharebg1.png');
+	background-repeat: no-repesat;
+	background-size: cover;
+}
 #first{
   margin-top: 0%;
   padding-top: 10px;
@@ -13,8 +20,8 @@
   right: 25px;
 }
 #member{
-	height: 20%;
-	width: 20%;
+	height: 16%;
+	width: 16%;
 }
 ul{
   display: inline-block;
@@ -37,7 +44,7 @@ ul{
 #label ul{
 	display: inline-block;
 	position:relative;
-	right: 56%;
+	left:-30%;
 	margin-top: 1%;
 }
 .container-fluid#c9{
@@ -95,4 +102,9 @@ button:active {
 .icon ul{
 	display: inline-block;
 	position:relative;
+}
+#pic1{
+  height: 150px;
+  margin-top: -5%;
+  margin-left: 73.5%;
 }

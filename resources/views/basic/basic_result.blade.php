@@ -25,12 +25,7 @@
         <p>{{Auth::user()->email}}</p>
       </div>
     </div>
-    <div class="form-group">
-      <label class="col-sm-2 control-label">密碼</label>
-      <div class="col-sm-7">
-        <p>{{Auth::user()->password}}</p>
-      </div>
-    </div>
+
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
         <a class="btn btn-default pull-right" href="{{url('basic_update')}}" role="button">修改</a>

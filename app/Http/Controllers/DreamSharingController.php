@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Dreams;
 use Auth;
+use App\User;
+use Carbon\Carbon;
 
 class DreamSharingController extends Controller
 {
@@ -37,15 +39,6 @@ class DreamSharingController extends Controller
       return view('mydream.mydream_result',['dreams'=>$dreams]);
     }
 
-    // public function mydream_show(Request $request){
-    //
-    //
-    //   $dream=Dreams::create([
-    //     'share_time'=>$request->share_time,
-    //   ]);
-    //   return redirect('share_area.share');
-    // }
-
     public function mydream_edit($id){
       $dreams=Dreams::find($id);
       return view('mydream.mydream_edit',['dreams'=>$dreams]);
@@ -67,14 +60,29 @@ class DreamSharingController extends Controller
 
     public function share(){
 
-      // $dreams=Dreams::where('share_time','NULL')->doesntExist();
+      // $dreams=Dreams::->doesntExist();
+      $dreams=Dreams::where('share_time','<>','NULL')->orderBy('share_time', 'desc')->get();
+      return view('share_area.share',['dreams'=>$dreams]);
 
-      return view('share_area.share');
     }
 
-    public function popage(){
-      // $dreams=Dreams::find($id);
-      return view('share_area.popage');
+
+    public function share_result($id){
+
+      $dreams=Dreams::find($id);
+
+      return view('share_area.share_content',['dreams'=>$dreams]);
+    }
+
+    public function popage($id){
+      $mytime =Carbon::now('Asia/Taipei');
+      $mytime->toDateTimeString();
+      Dreams::find($id)->update([
+        'share_time'=>$mytime
+      ]);
+
+
+      return redirect('share');
     }
 
     public function basic()
@@ -89,12 +97,11 @@ class DreamSharingController extends Controller
     public function basic_edit(Request $request)
     {
       Auth::user()->update([
+        'account'=>$request->account,
         'name'=>$request->name,
         'email'=>$request->email,
-        'sex'=>$request->sex,
-        'password'=>$request->password,
       ]);
-      return redirect('basic_result.basic');
+      return redirect('/basic_result');
     }
 
 

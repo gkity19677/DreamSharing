@@ -10,7 +10,7 @@
   <div class="col-md-offset-8 col-md-2 icon" >
       <ul>
         <li><a href="{{url('mydream_add')}}"><i class="fas fa-plus"></i></a></li>
-        <li><a href="mydream.html"><i class="fas fa-trash-alt"></i></a></li>
+        
       </ul>
   </div>
 	<div class="box box-primary" id="form">
