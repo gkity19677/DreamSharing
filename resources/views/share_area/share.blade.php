@@ -20,8 +20,8 @@
           @foreach ($dreams as $dream)
             <a id="a_{{$dream->id}}" href="share_result/{{$dream->id}}"></a>
               <div class="word" dream_id="{{$dream->id}}">
-                <p class="text-muted" >
-                  @if($dreams[$loop->index]->MyUser->sex == "")
+                <p class="text-muted">
+                  @if($dream->MyUser->sex == "F")
                     <img src="image/femaleuser.png" id="user">
                   @else
                     <img src="image/maleuser.png" id="user">

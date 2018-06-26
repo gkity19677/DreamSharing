@@ -31,7 +31,7 @@
 						    $('html,body').animate({scrollTop:$('#c3').offset().top},1500);
 						    });
 							</script>
-							<li><a href="#">我的收藏</a></li>
+							<li><a href="{{url('keep')}}">我的收藏</a></li>
 							@if (!Auth::check())
 								<li><a href="{{url('login')}}">登入</a></li>
 							@else
@@ -49,7 +49,7 @@
 								</li>
 							@endif
 
-							
+
 							@if(Auth::user()->sex=='M')
 								<a href="{{url('basic_result')}}">
 	  							<img src="{{asset('image/maleuser.png')}}" alt="member" id="member">

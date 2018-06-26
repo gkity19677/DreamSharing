@@ -11,8 +11,9 @@
   @endforeach
 
   <div class="analyze_content">
-    <div id="familyword">
-      <h1 class="text-center">{{$ana->title}}</h1>
+    <button type="submit" name="keep" class="keepbtn"><i id="heart" onclick="keep()" class="far fa-heart" > 收藏</i></button>
+    <div id="theword">
+			<div id="title">{{$ana->title}}</div><br>
       {!!$ana->content!!}
 
     </div>

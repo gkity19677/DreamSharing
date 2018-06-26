@@ -74,6 +74,11 @@ class DreamSharingController extends Controller
       return view('share_area.share_content',['dreams'=>$dreams]);
     }
 
+    public function keep(){
+
+      return view('share_area.keep');
+    }
+
     public function popage($id){
       $mytime =Carbon::now('Asia/Taipei');
       $mytime->toDateTimeString();

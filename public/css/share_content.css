@@ -48,7 +48,7 @@ ul{
 	margin-top: 1%;
 }
 .container-fluid#c9{
-  padding-top: 8%;
+  padding-top: 2%;
   height: 700px;
 }
 #user{
@@ -107,4 +107,10 @@ button:active {
   height: 150px;
   margin-top: -5%;
   margin-left: 73.5%;
+}
+#comment{
+  margin-top: 2%;
+}
+hr{
+  width: 50%;
 }

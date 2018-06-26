@@ -1,10 +1,14 @@
 body {
   height: 100%;
   margin: 0;
+
 }
 .container-fluid#c5{
   height: 500px;
   margin-left: 5%;
+  /* background-image: url('../image/bluebg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; */
 }
 #first{
   margin-top: 0%;
