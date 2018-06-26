@@ -33,8 +33,8 @@
           'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
         },
         success: function (data) {
-          $("#familyword").empty();
-          $("#familyword").append('<h1 class="text-center">'+data.ana.title +'</h1>'+data.ana.content)
+          $("#theword").empty();
+          $("#theword").append('<div id="title">'+data.ana.title +'</div><br>'+data.ana.content)
         },
         error: function(xhr, type){
           alert('出錯惹！');

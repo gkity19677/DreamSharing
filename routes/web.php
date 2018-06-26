@@ -41,7 +41,7 @@ Route::post('/mydream_edit', 'DreamSharingController@mydream_update');
 Route::get('/mydream_delete/{id}', 'DreamSharingController@mydream_delete');
 
 Route::get('/analyze', 'AnalyzeController@analyze');
-Route::get('/person', 'AnalyzeController@analyze_person');
+Route::get('/analyze/{kind}', 'AnalyzeController@analyzebykind');
 Route::post('/person', 'AnalyzeController@analyze_person_post');
 
 Route::get('/basic_result', 'DreamSharingController@basic');

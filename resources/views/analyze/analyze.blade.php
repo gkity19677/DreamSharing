@@ -8,21 +8,21 @@
 				<img src="image/ana.png" alt="">
 			</div>
 			<div class="toppic col-md-offset-2 col-md-10">
-			<a href="{{url('person')}}" target="_blank" ><img src="image/personcircle2.png" id="ana1"
+			<a href="{{url('analyze/person')}}" target="_blank" ><img src="image/personcircle2.png" id="ana1"
 			onmouseover="this.src='image/personcircle1.png';"
 			onmouseout="this.src='image/personcircle2.png';"></a>
-			<a href="# target="_blank" ><img src="image/animalcircle2.png" id="ana2"
+			<a href="{{url('analyze/animal')}}" target="_blank" ><img src="image/animalcircle2.png" id="ana2"
 			onmouseover="this.src='image/animalcircle1.png';"
 			onmouseout="this.src='image/animalcircle2.png';"></a>
-			<a href="#" target="_blank" ><img src="image/ghostcircle2.png" id="ana3"
+			<a href="{{url('analyze/ghostly')}}" target="_blank" ><img src="image/ghostcircle2.png" id="ana3"
 			onmouseover="this.src='image/ghostcircle1.png';"
 			onmouseout="this.src='image/ghostcircle2.png';"></a>
 		</div>
 		<div class=" col-md-offset-3 col-md-9" >
-			<a href="#" target="_blank" ><img src="image/eventcircle2.png" id="ana4"
+			<a href="{{url('analyze/event')}}" target="_blank" ><img src="image/eventcircle2.png" id="ana4"
 			onmouseover="this.src='image/eventcircle1.png';"
 			onmouseout="this.src='image/eventcircle2.png';"></a>
-			<a href="#" target="_blank" ><img src="image/scenecircle2.png" id="ana5"
+			<a href="{{url('analyze/place')}}" target="_blank" ><img src="image/scenecircle2.png" id="ana5"
 			onmouseover="this.src='image/scenecircle1.png';"
 			onmouseout="this.src='image/scenecircle2.png';"></a>
 		</div>

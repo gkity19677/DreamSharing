@@ -17,15 +17,15 @@ class AnalyzeController extends Controller
       return view('analyze.analyze');
     }
 
-    public function analyze_person(){
+    public function analyzebykind($kind){
 
 
 
       // $dreams=Dreams::find($id);
-      $ana=Analysis::where('kind','person')->first();
+      $ana=Analysis::where('kind',$kind)->first();
 
-      $titles = Analysis::where('kind','person')->select('title','id')->get();
-      return view('analyze.person',['ana'=>$ana,'titles'=>$titles]);
+      $titles = Analysis::where('kind',$kind)->select('title','id')->get();
+      return view('analyze.kind',['ana'=>$ana,'titles'=>$titles]);
     }
     public function analyze_person_post(Request $request)
     {

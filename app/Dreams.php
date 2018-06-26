@@ -12,7 +12,7 @@ class Dreams extends Model
   public $timestamps = false;
     //
   public function MyUser(){
-        return $this->belongsTo('App\User','account','account');
+        return $this->belongsTo('App\User','u_id','id');
   }
 
 }
