@@ -25,6 +25,7 @@ Route::get('/share', 'DreamSharingController@share');
 Route::get('/share_result/{id}', 'DreamSharingController@share_result');
 Route::post('/share_result/{id}', 'DreamSharingController@message');
 Route::get('/keep', 'DreamSharingController@keep');
+Route::post('/keep', 'DreamSharingController@checklike');
 // Route::get('/popage/{id}', 'DreamSharingController@popage');
 // Route::post('/popage', 'DreamSharingController@popage_update');
 

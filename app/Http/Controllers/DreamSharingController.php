@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Dreams;
 use App\Replys;
+use App\Favorites;
 use Auth;
 use App\User;
 use Carbon\Carbon;
@@ -80,6 +81,15 @@ class DreamSharingController extends Controller
     public function keep(){
 
       return view('share_area.keep');
+    }
+
+    public function checklike(Request $request)
+    {
+      $likes=Favorites::create([
+        'flag'=>$request->flag,
+        'u_id'=>Auth::user()->id,
+        'article_id'=>$request->article_id,
+      ]);
     }
 
     public function popage($id){
