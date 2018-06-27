@@ -11,9 +11,22 @@
   @endforeach
 
   <div class="analyze_content">
-    <button type="submit" name="keep" class="keepbtn">
-      <i id="heart" onclick="keep()" class="far fa-heart" > 收藏</i>
-    </button>
+    <div id= "favorite_div">
+      @if (DB::table('favorites')->where('u_id',Auth::user()->id)->where('article_id',$ana->id)->where('flag','A')->first()==null)
+        <button type="submit" id="keep" class="keepbtn">
+          <i id="heart" class="far fa-heart" > 收藏</i>
+        </button>
+      @else
+        <button type="submit" class="keepbtn">
+          <i id="heart" class="fas fa-heart" > 收藏</i>
+        </button>
+      @endif
+    </div>
+
+
+
+
+
     <div id="theword">
 			<div id="title">{{$ana->title}}</div><br>
       {!!$ana->content!!}
@@ -22,6 +35,7 @@
   </div>
   <meta name="_token" content="{{ csrf_token() }}"/>
   <script type="text/javascript">
+    var now_id = {{$ana->id}};
     $(".title_change").click(function() {
       var id = this.id;
       $.ajax({
@@ -35,14 +49,74 @@
           'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
         },
         success: function (data) {
+          now_id=id;
           $("#theword").empty();
-          $("#theword").append('<div id="title">'+data.ana.title +'</div><br>'+data.ana.content)
+          $("#theword").append('<div id="title">'+data.ana.title +'</div><br>'+data.ana.content);
+          if (data.like==null) {
+            $("#favorite_div").empty();
+            $("#favorite_div").append("<button type='submit' id='keep' class='keepbtn'><i id='heart' class='far fa-heart' > 收藏</i></button>");
+            
+            $("#keep").click(function(){
+              console.log(1234);
+              var flag ='A';
+              var id = now_id;
+              $.ajax({
+                type : 'post',
+                url : "{{url('keep')}}",
+                data : {
+                  flag:flag,
+                  article_id:id,
+                },
+                headers: {
+                  'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+                },
+                success: function (data) {
+                  console.log(123);
+                  $("#heart").toggleClass("far",false);
+                  $("#heart").toggleClass("fas",true);
+                  $("#keep").attr("id","");
+                },
+                error: function(xhr, type){
+                  alert('出錯惹！');
+                }
+              });
+            });
+          }else{
+            $("#favorite_div").empty();
+            $("#favorite_div").append("<button type='submit'  class='keepbtn'><i id='heart' class='fas fa-heart' > 收藏</i></button>")
+          }
         },
         error: function(xhr, type){
           alert('出錯惹！');
         }
       });
 
+    });
+
+    $("#keep").click(function(){
+      console.log(1234);
+      var flag ='A';
+      var id = now_id;
+      $.ajax({
+        type : 'post',
+        url : "{{url('keep')}}",
+        data : {
+          flag:flag,
+          article_id:id,
+        },
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+        },
+        success: function (data) {
+          console.log(123);
+          $("#heart").toggleClass("far",false);
+          $("#heart").toggleClass("fas",true);
+          $("#keep").attr("id","");
+        },
+        error: function(xhr, type){
+          alert('出錯惹！');
+        }
+      });
     });
   </script>
 

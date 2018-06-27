@@ -30,8 +30,13 @@
                 <br><br>
                 {!!$dreams->content!!}
               </p><br>
-              <button type="submit" name="keep"><i id="heart" onclick="keep()" class="far fa-heart" > 收藏</i></button>
-              
+              @if ($like==null)
+                <button type="submit" name="keep"><i id="heart" class="far fa-heart" > 收藏</i></button>
+              @else
+                <button type="submit"><i id="heart" class="fas fa-heart" > 收藏</i></button>
+              @endif
+
+
             </div><br>
             <form class="form-group" action="{{url('share_result')}}/{{$dreams->id}}" method="post">
               @csrf
@@ -61,9 +66,32 @@
       </div>
   		<img src="{{asset('image/sharebg.png')}}" id="pic1">
     </div>
+    <meta name="_token" content="{{ csrf_token() }}"/>
     <script language="javascript">
-    function keep(){
-      document.getElementById("heart").className="fas fa-heart";
-    }
+    $("button[name='keep']").click(function(){
+      var flag ='D';
+      var btn =$("button[name='keep']");
+      var id= {{$dreams->id}};
+      $.ajax({
+        type : 'post',
+        url : "{{url('keep')}}",
+        data : {
+          flag:flag,
+          article_id:id,
+        },
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+        },
+        success: function (data) {
+          console.log(123);
+          $("#heart").toggleClass("far",false);
+          $("#heart").toggleClass("fas",true);
+          $("button[name='keep']").attr("name","");
+        },
+        error: function(xhr, type){
+          alert('出錯惹！');
+        }
+      });
+    });
     </script>
     @endsection
