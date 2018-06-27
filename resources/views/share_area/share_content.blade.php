@@ -12,7 +12,7 @@
                 <p class="text-muted" >
                   @if(Auth::user()->sex=='M')
     								<a href="{{url('basic_result')}}">
-    	  							<img src="{{asset('image/maleuser.png')}}" alt="member" id="member">
+    	  							<img src="{{asset('image/maleuser.png')}}" id="user">
     								</a>
     							@elseif (Auth::user()->sex=='F')
     								<a href="{{url('basic_result')}}">
@@ -33,9 +33,12 @@
               <button type="submit" name="keep"><i id="heart" onclick="keep()" class="far fa-heart" > 收藏</i></button>
               <button type="submit" name="comment"><i class="far fa-comment-alt"> 回覆</i></button>
             </div><br>
-            <div class="form-group">
-          <textarea class="form-control" style="width:630px;height:100px;" row="5" placeholder="我想說..."></textarea>
-        </div>
+            <form class="form-group" action="{{url('share_result')}}/{{$dreams->id}}" method="post">
+              @csrf
+              <textarea class="form-control" name="content" style="width:630px;height:100px;" row="5" placeholder="我想說...">
+              </textarea>
+              <input type="submit" name="" value="回復">
+            </form>
         <hr>
         <div class="usercomment">
           <img src="{{asset('image/maleuser.png')}}" id="user"><b id="username">無敵鐵金剛</b>

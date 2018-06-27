@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Dreams;
+use App\Replys;
 use Auth;
 use App\User;
 use Carbon\Carbon;
@@ -107,6 +108,19 @@ class DreamSharingController extends Controller
         'email'=>$request->email,
       ]);
       return redirect('/basic_result');
+    }
+
+    public function message(Request $request,$id){
+      $mytime =Carbon::now('Asia/Taipei');
+      $mytime->toDateTimeString();
+      $reply=Replys::create([
+        'content'=>$request->content,
+        'date'=>$mytime,
+        'u_id'=>Auth::user()->id,
+        'did'=>$id,
+      ]);
+
+      return redirect('/share_result/'.$id);
     }
 
 
