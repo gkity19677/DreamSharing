@@ -72,7 +72,9 @@ class DreamSharingController extends Controller
 
       $dreams=Dreams::find($id);
 
-      return view('share_area.share_content',['dreams'=>$dreams]);
+      $replys=Replys::where('did', $id)->get();
+
+      return view('share_area.share_content',['dreams'=>$dreams],['replys'=>$replys]);
     }
 
     public function keep(){
