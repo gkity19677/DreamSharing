@@ -1,7 +1,13 @@
+body {
+  height: 100%;
+  margin: 0;
+}
 .container-fluid#c7{
   padding-top: 2%;
-  height: 700px;
-  /* background: blue; */
+  height: 730px;
+  background-image: url('../image/bluebg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 .icon li{
 	font-size:20px;
@@ -58,7 +64,7 @@ ul{
 #label ul{
 	display: inline-block;
 	position:relative;
-	right: 56%;
+	left:-30%;
 	margin-top: 1%;
 }
 #title{
@@ -73,7 +79,6 @@ ul{
   margin-top: 4%;
   font-family: 微軟正黑體;
   font-size: 16px;
-  /* background: blue; */
 }
 .mydream{
   margin-top: 8%;
@@ -81,4 +86,9 @@ ul{
 }
 #date1{
   margin-left: 38%;
+}
+#pic1{
+  height: 300px;
+  margin-top: -5%;
+  margin-left: 5%;
 }

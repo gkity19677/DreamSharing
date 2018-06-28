@@ -31,17 +31,18 @@
                 {!!$dreams->content!!}
               </p><br>
               @if ($like==null)
-                <button type="submit" name="keep"><i id="heart" class="far fa-heart" > 收藏</i></button>
+                <button type="submit" class="col-md-2 like" name="keep"><i id="heart" class="far fa-heart" > 收藏</i></button>
               @else
-                <button type="submit"><i id="heart" class="fas fa-heart" > 收藏</i></button>
+                <button type="submit" class="col-md-2 like"><i id="heart" class="fas fa-heart" > 收藏</i></button>
               @endif
 
 
             </div><br>
-            <form class="form-group" action="{{url('share_result')}}/{{$dreams->id}}" method="post">
+            <form class="form-group " action="{{url('share_result')}}/{{$dreams->id}}" method="post">
               @csrf
-              <button type="submit" name="comment"><i class="far fa-comment-alt"> 回覆</i></button>
+
               <textarea class="form-control" name="content" style="width:630px;height:100px;" row="5" placeholder="我想說..."></textarea>
+              <button type="submit" class="col-md-offset-9 reply" name="comment"><i class="far fa-comment-alt"> 回覆</i></button>
             </form>
         <hr>
         @foreach ($replys as $reply)

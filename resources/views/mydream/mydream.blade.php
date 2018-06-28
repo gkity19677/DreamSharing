@@ -10,7 +10,7 @@
   <div class="col-md-offset-8 col-md-2 icon" >
       <ul>
         <li><a href="{{url('mydream_add')}}"><i class="fas fa-plus"></i></a></li>
-        
+
       </ul>
   </div>
 	<div class="box box-primary" id="form">
@@ -28,7 +28,9 @@
           @endforeach
 
         </div>
+
   </div>
+  	<img src="image/mydreampic1.png" id="pic1">
 </div>
 <script language="javascript">
   $('.word').click(function() {

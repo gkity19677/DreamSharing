@@ -2,8 +2,9 @@ body {
   height: 100%;
   margin: 0;
   background-image: url('../image/sharebg1.png');
-	background-repeat: no-repesat;
+	background-repeat: no-repeat;
 	background-size: cover;
+  background-attachment: fixed;　
 }
 #first{
   margin-top: 0%;
@@ -48,7 +49,7 @@ ul{
 	margin-top: 1%;
 }
 .container-fluid#c9{
-  padding-top: 8%;
+  padding-top: 1%;
   height: 700px;
 }
 #user{
@@ -105,12 +106,23 @@ button:active {
 }
 #pic1{
   height: 150px;
-  margin-top: -5%;
-  margin-left: 73.5%;
+  position: fixed;
+  top: 80%;
+  left: 75%;
+
 }
 #comment{
   margin-top: 2%;
 }
 hr{
   width: 50%;
+}
+
+.reply{
+
+}
+.like{
+
+  margin-bottom: 5%;
+  margin-left: 0%;
 }
