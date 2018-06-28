@@ -1,14 +1,17 @@
 body {
   height: 100%;
   margin: 0;
-
+  background-image: url('../image/bluebg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 730px;
 }
 .container-fluid#c5{
   height: 500px;
   margin-left: 5%;
-  /* background-image: url('../image/bluebg.jpg');
+  background-image: url('../image/bluebg.jpg');
   background-repeat: no-repeat;
-  background-size: cover; */
+  background-size: cover;
 }
 #first{
   margin-top: 0%;
@@ -47,10 +50,10 @@ ul{
 	border-bottom: solid 0.5px #000000;
 }
 #label ul{
-	display: inline-block;
+  display: inline-block;
 	position:relative;
-	right: 56%;
-	margin-top: 1%;
+	left:-30%;
+	margin-top:1%;
 }
 #ana1{
   margin-right: 2%;

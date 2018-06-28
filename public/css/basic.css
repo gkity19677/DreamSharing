@@ -1,9 +1,12 @@
 body {
   height: 100%;
   margin: 0;
+  background-image: url('../image/bluebg.jpg');
+	background-repeat: no-repesat;
+	background-size: cover;
 }
 .container-fluid#c11{
-  padding-top: 8%;
+  padding-top: 3%;
   height: 700px;
 }
 #first{
@@ -61,4 +64,10 @@ margin-left: 43%;
 }
 p{
   padding-top: 2%;
+}
+#pic2{
+  height: 350px;
+  position: fixed;
+  top:50%;
+  left: 3%;
 }

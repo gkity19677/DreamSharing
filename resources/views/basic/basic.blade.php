@@ -33,6 +33,7 @@
   		</div>
 		</div>
 		</form>
+    <img src="image/keep2.png" id="pic2">
 	</div>
 
 @endsection

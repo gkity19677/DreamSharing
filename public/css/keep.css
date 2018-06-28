@@ -7,7 +7,7 @@ body {
 }
 .container-fluid#c12{
   padding-top: 2%;
-  height: 640px;
+  height: 700px;
   /* background: blue; */
 }
 .icon li{
@@ -80,11 +80,13 @@ ul{
 }
 #pic1{
   height: 300px;
-  margin-top: -18%;
-  margin-left: 75%;
+  position: fixed;
+  top:15%;
+  left: 75%;
 }
 #pic2{
   height: 350px;
-  margin-top: -3%;
-  margin-left: 1%;
+  position: fixed;
+  top:50%;
+  left: 3%;
 }

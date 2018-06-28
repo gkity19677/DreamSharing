@@ -36,5 +36,6 @@
 
         </div>
   </div>
+  <img src="{{asset('image/mydreampic1.png')}}" id="pic1">
 </div>
 @endsection

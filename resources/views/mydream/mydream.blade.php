@@ -30,7 +30,7 @@
         </div>
 
   </div>
-  	<img src="image/mydreampic1.png" id="pic1">
+  	<img src="{{asset('image/mydreampic1.png')}}" id="pic1">
 </div>
 <script language="javascript">
   $('.word').click(function() {

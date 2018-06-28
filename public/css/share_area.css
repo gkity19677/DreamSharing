@@ -48,7 +48,7 @@ ul{
 	margin-top: 1%;
 }
 .container-fluid#c8{
-  padding-top: 8%;
+  padding-top: 2%;
   height: 700px;
 }
 .typebutton{
@@ -107,6 +107,7 @@ button:focus{
 }
 #pic1{
   height: 150px;
-  margin-top: -15%;
-  margin-left: 110%;
+  position: fixed;
+  top: 80%;
+  left: 75%;
 }

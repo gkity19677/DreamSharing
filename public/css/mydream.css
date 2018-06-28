@@ -89,6 +89,7 @@ ul{
 }
 #pic1{
   height: 300px;
-  margin-top: -5%;
-  margin-left: 5%;
+  position: fixed;
+  top: 50%;
+  left: 5%;
 }
