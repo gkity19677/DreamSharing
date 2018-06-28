@@ -15,7 +15,7 @@ class DreamSharingController extends Controller
     //
 
     public function mydream(){
-      $dreams=Dreams::all();
+      $dreams=Dreams::where('u_id',Auth::user()->id)->get();
       return view('mydream.mydream',['dreams'=>$dreams]);
     }
 
@@ -29,7 +29,7 @@ class DreamSharingController extends Controller
         'title' =>$request->title ,
         'content'=>$request->content,
         'date'=>$request->date,
-        'account'=>Auth::user()->account,
+        'u_id'=>Auth::user()->id,
       ]);
 
       return redirect('mydream');

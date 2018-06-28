@@ -41,8 +41,7 @@
             <form class="form-group" action="{{url('share_result')}}/{{$dreams->id}}" method="post">
               @csrf
               <button type="submit" name="comment"><i class="far fa-comment-alt"> 回覆</i></button>
-              <textarea class="form-control" name="content" style="width:630px;height:100px;" row="5" placeholder="我想說...">
-              </textarea>
+              <textarea class="form-control" name="content" style="width:630px;height:100px;" row="5" placeholder="我想說..."></textarea>
             </form>
         <hr>
         @foreach ($replys as $reply)
