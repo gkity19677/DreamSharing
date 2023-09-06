@@ -8,7 +8,7 @@ class Favorites extends Model
 {
     protected $table='favorites';
     protected $primaryKey='fid';
-    protected $fillable=['fid','flag','u_id','article_id'];
+    protected $fillable=['fid','flag','u_id','article_id','account'];
     public $timestamps = false;
 
     public function MyUser(){

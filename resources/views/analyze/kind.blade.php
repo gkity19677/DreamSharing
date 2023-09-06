@@ -12,7 +12,7 @@
 
   <div class="analyze_content">
     <div id= "favorite_div">
-      @if (DB::table('favorites')->where('u_id',Auth::user()->id)->where('article_id',$ana->id)->where('flag','A')->first()==null)
+      @if (DB::table('favorites')->where('fid',Auth::user()->id)->where('article_id',$ana->id)->where('flag','A')->first()==null)
         <button type="submit" id="keep" class="keepbtn">
           <i id="heart" class="far fa-heart" > 收藏</i>
         </button>

@@ -8,11 +8,11 @@ class Dreams extends Model
 {
     protected $table='dreams';
   protected   $primaryKey = 'id';
-  protected  $fillable = ['title','content','date','u_id','share_time'];
+  protected  $fillable = ['title','content','date','id','share_time','account'];
   public $timestamps = false;
     //
   public function MyUser(){
-        return $this->belongsTo('App\User','u_id','id');
+        return $this->belongsTo('App\User','account','account');
   }
 
 }

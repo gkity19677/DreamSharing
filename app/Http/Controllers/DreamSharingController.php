@@ -15,7 +15,7 @@ class DreamSharingController extends Controller
     //
 
     public function mydream(){
-      $dreams=Dreams::where('u_id',Auth::user()->id)->get();
+      $dreams=Dreams::where('account',Auth::user()->account)->get();
       return view('mydream.mydream',['dreams'=>$dreams]);
     }
 
@@ -26,10 +26,12 @@ class DreamSharingController extends Controller
 
     public function mydream_add(Request $request){
       $dream=Dreams::create([
+        // 'id'=>Auth::user()->id,
+        'account'=>Auth::user()->account,
         'title' =>$request->title ,
         'content'=>$request->content,
         'date'=>$request->date,
-        'u_id'=>Auth::user()->id,
+        
       ]);
 
       return redirect('mydream');
@@ -70,25 +72,29 @@ class DreamSharingController extends Controller
 
 
     public function share_result($id){
-      $like=Favorites::where('u_id',Auth::user()->id)->where('article_id',$id)->where('flag','D')->first();
+      $like=Favorites::where('fid',Auth::user()->id)->where('article_id',$id)->where('flag','D')->first();
 
       $dreams=Dreams::find($id);
+      $sex = $dreams->MyUser->sex;
+      // $dreams=Dreams::where('account',Auth::user()->account);
+      
 
-      $replys=Replys::where('did', $id)->get();
+      $replys=Replys::where('did', Auth::user()->id)->get();
 
-      return view('share_area.share_content',['dreams'=>$dreams,'replys'=>$replys,'like'=>$like]);
+      return view('share_area.share_content',['sex'=>$sex,'dreams'=>$dreams,'replys'=>$replys,'like'=>$like]);
     }
 
     public function keep(){
-      $likes=Favorites::where('u_id',Auth::user()->id)->get();
+      $likes=Favorites::where('fid',Auth::user()->id)->get();
       return view('share_area.keep',['likes'=>$likes]);
     }
 
     public function checklike(Request $request)
     {
       $likes=Favorites::create([
+        'account'=>$request->account,
         'flag'=>$request->flag,
-        'u_id'=>Auth::user()->id,
+        'fid'=>Auth::user()->id,
         'article_id'=>$request->article_id,
       ]);
 
@@ -131,8 +137,8 @@ class DreamSharingController extends Controller
       $reply=Replys::create([
         'content'=>$request->content,
         'date'=>$mytime,
-        'u_id'=>Auth::user()->id,
-        'did'=>$id,
+        'account'=>Auth::user()->account,
+        'did'=>Auth::user()->id,
       ]);
 
       return redirect('/share_result/'.$id);

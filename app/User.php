@@ -29,6 +29,6 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
     public function Dreams() {
-        return $this->hasMany('App\Dreams');
+        return $this->hasMany('App\Dreams','account','account');
     }
 }

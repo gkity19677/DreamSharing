@@ -10,11 +10,11 @@
             <div class="box-body">
     					<div>
                 <p class="text-muted" >
-                  @if($dreams->MyUser->sex=='M')
+                  @if($sex=='M')
     								<a href="{{url('basic_result')}}">
     	  							<img src="{{asset('image/maleuser.png')}}" id="user">
     								</a>
-    							@elseif ($dreams->MyUser->sex=='F')
+    							@elseif ($sex=='F')
     								<a href="{{url('basic_result')}}">
     	  							<img src="{{asset('image/femaleuser.png')}}" id="user">
     								</a>
@@ -72,12 +72,14 @@
       var flag ='D';
       var btn =$("button[name='keep']");
       var id= {{$dreams->id}};
+      var account = "{{ Auth::user()->account }}";
       $.ajax({
         type : 'post',
         url : "{{url('keep')}}",
         data : {
           flag:flag,
           article_id:id,
+          account:account,
         },
         headers: {
           'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
