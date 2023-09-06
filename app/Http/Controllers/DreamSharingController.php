@@ -72,7 +72,7 @@ class DreamSharingController extends Controller
 
 
     public function share_result($id){
-      $like=Favorites::where('fid',Auth::user()->id)->where('article_id',$id)->where('flag','D')->first();
+      $like=Favorites::where('account',Auth::user()->account)->where('article_id',$id)->where('flag','D')->first();
 
       $dreams=Dreams::find($id);
       $sex = $dreams->MyUser->sex;
@@ -85,7 +85,7 @@ class DreamSharingController extends Controller
     }
 
     public function keep(){
-      $likes=Favorites::where('fid',Auth::user()->id)->get();
+      $likes=Favorites::where('account',Auth::user()->account)->get();
       return view('share_area.keep',['likes'=>$likes]);
     }
 
@@ -94,8 +94,8 @@ class DreamSharingController extends Controller
       $likes=Favorites::create([
         'account'=>$request->account,
         'flag'=>$request->flag,
-        'fid'=>Auth::user()->id,
         'article_id'=>$request->article_id,
+        // 'fid'=>Auth::user()->id,
       ]);
 
       return response()->json();
